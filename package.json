@@ -1,0 +1,25 @@
+{
+  "name": "node-scraper",
+  "version": "1.0.0",
+  "description": "Scraping the web bc there's no API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oliver-McGill-Labs/node-scraper.git"
+  },
+  "author": "MGO",
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "cheerio-req": "^1.0.0",
+    "express": "^4.15.0",
+    "request": "^2.79.0"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Oliver-McGill-Labs/node-scraper/issues"
+  },
+  "homepage": "https://github.com/Oliver-McGill-Labs/node-scraper#readme"
+}
