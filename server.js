@@ -44,7 +44,14 @@ app.get('/scrape', function(req, res){
 
                 title = data.children().first().text();
 
-           // Store title to the our json object.
+                // We will repeat the same process as above.  This time we notice that the release is located within the last element.
+                // Writing this code will move us to the exact location of the release year.
+
+                release = data.children().last().children().text();
+
+                json.title = title;
+
+           // Store title and extracted data to the our json object.
 
                 json.title = title;
             })
