@@ -49,8 +49,6 @@ app.get('/scrape', function(req, res){
 
                 release = data.children().last().children().text();
 
-                json.title = title;
-
            // Store title and extracted data to the our json object.
 
                 json.title = title;
