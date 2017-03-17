@@ -24,6 +24,8 @@ app.get('/scrape', function(req, res){
         json.release = release;
       })
 
+      
+
       $('.ratingValue').filter(function(){
         var data = $(this);
         rating = data.text().trim();
