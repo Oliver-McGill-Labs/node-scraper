@@ -32,16 +32,23 @@ app.get('/scrape', function(req, res){
       
       })
 
-      $('.stageText').filter(function(){
-        var data = $(this);
+      // $('.stageText').filter(function(){
+      //   var data = $(this);
         
-        status = data.text().trim(); 
+      //   status = data.text().trim(); 
       
 
-        console.log('The bill\'s most recent status was ' + status);        
-        json.status = status;
+      //   console.log('The bill\'s most recent status was ' + status);        
+      //   json.status = status;
         
-      })
+      // })
+      $('.stageText').each(function(i) {
+        //test
+        // status = obj.text().trim();
+        
+          console.log(this.text())
+        
+      });
     }
 
     fs.writeFile('output.json', JSON.stringify(json, null, 4), function(err){
