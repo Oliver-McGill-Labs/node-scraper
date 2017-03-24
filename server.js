@@ -32,23 +32,28 @@ app.get('/scrape', function(req, res){
       
       })
 
-      // $('.stageText').filter(function(){
-      //   var data = $(this);
-        
-      //   status = data.text().trim(); 
-      
+      $('#usrBillStages_pnlBillStages').each(function(){
+        var data = $(this);
+        var newArray = [];
 
-      //   console.log('The bill\'s most recent status was ' + status);        
-      //   json.status = status;
+        // status = data.text().trim().replace(/(\r\n|\n|\r)/gm,"").replace(/(\t)/gm,","); 
+        status = data.text().trim();
+        newArray.push(status)
+
+        // console.log('The bill\'s most recent status was ' + status);        
+        // json.status = status;
+
+        console.log(newArray);
         
-      // })
-      $('.stageText').each(function(i) {
-        //test
-        // status = obj.text().trim();
-        
-          console.log(this.text())
-        
-      });
+      })
+
+     
+      // $('.stageText').each(function() {
+      //   var testObj = $(this)
+      
+      //   var billStages = testObj.text()
+       
+      // });
     }
 
     fs.writeFile('output.json', JSON.stringify(json, null, 4), function(err){
